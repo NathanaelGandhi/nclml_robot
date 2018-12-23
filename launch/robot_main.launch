@@ -5,7 +5,7 @@
 <group ns="$(arg namespace)">
 
     <arg name="CREATE_DRIVER"   value="1"   />
-    <arg name="LIDAR"           value="0"   />
+    <arg name="LIDAR"           value="1"   />
     <arg name="IMU"             value="0"   />
     <arg name="REALSENSE"       value="0"   />
 
@@ -14,7 +14,7 @@
     </group>
 
     <group if="$(arg LIDAR)">
-       # <include file="$(find pkg)/launch/launchfile.launch" />
+        <include file="$(find rplidar_ros)/launch/rplidar.launch" />
     </group>
 
     <group if="$(arg IMU)">
