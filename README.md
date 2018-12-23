@@ -42,7 +42,7 @@ arg name="LIDAR"           value="1"
 arg name="IMU"             value="1"
 arg name="CAMERA"          value="1"
 ```
-Namespaced
+Robots namespace
 ```
 arg name="namespace" default="nclml"
 ```
