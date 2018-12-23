@@ -1,0 +1,30 @@
+<launch>
+
+<arg name="namespace" default="nclml" /> #Nathanael's Camera, Lidar, Mapping and Localisation
+
+<group ns="$(arg namespace)">
+
+    <arg name="CREATE_DRIVER"   value="1"   />
+    <arg name="LIDAR"           value="0"   />
+    <arg name="IMU"             value="0"   />
+    <arg name="REALSENSE"       value="0"   />
+
+    <group if="$(arg CREATE_DRIVER)">
+        <include file="$(find ca_driver)/launch/create_2.launch" />
+    </group>
+
+    <group if="$(arg LIDAR)">
+       # <include file="$(find pkg)/launch/launchfile.launch" />
+    </group>
+
+    <group if="$(arg IMU)">
+       # <include file="$(find pkg)/launch/launchfile.launch" />
+    </group>
+
+    <group if="$(arg REALSENSE)">
+       # <include file="$(find pkg)/launch/launchfile.launch" />
+    </group>
+
+</group>
+
+</launch>
