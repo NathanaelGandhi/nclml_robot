@@ -35,12 +35,13 @@ Main launch file to run the robot
 ```
 roslaunch nclml_robot robot_main.launch  
 ```
-arguments launch specific functionality
+Arguments launch specific functionality
 ```
 arg name="CREATE_DRIVER"   value="1"
 arg name="LIDAR"           value="1"
 arg name="IMU"             value="1"
 arg name="CAMERA"          value="1"
 ```
-### imu.launch
-Launches imu node
+
+## imu.launch
+Launches um7 imu node
