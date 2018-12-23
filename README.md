@@ -29,7 +29,14 @@ Nathanael's Camera, Lidar, Mapping and Localisation robot project
 * [ROS Navigation Tuning Guide](http://kaiyuzheng.me/documents/navguide.pdf)
 
 # Codebase
-main launch file uses arguments to launch specific functionality (ie, cameras, lidar, etc)
+main launch file to run the robot
 ```
 roslaunch nclml_robot robot_main.launch  
+```
+uses arguments to launch specific functionality
+```
+arg name="CREATE_DRIVER"   value="1"
+arg name="LIDAR"           value="1"
+arg name="IMU"             value="1"
+arg name="CAMERA"          value="1"
 ```
