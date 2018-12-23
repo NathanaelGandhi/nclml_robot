@@ -26,4 +26,5 @@ http://kaiyuzheng.me/documents/navguide.pdf
 
 # Codebase
 main launch file uses arguments to launch specific functionality (ie, cameras, lidar, etc)
-robot_main.launch 
+
+roslaunch nclml_robot robot_main.launch  
