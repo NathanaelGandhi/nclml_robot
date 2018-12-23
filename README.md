@@ -42,5 +42,5 @@ arg name="LIDAR"           value="1"
 arg name="IMU"             value="1"
 arg name="CAMERA"          value="1"
 ```
-## imu.launch
+### imu.launch
 Launches imu node
