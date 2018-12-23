@@ -42,6 +42,10 @@ arg name="LIDAR"           value="1"
 arg name="IMU"             value="1"
 arg name="CAMERA"          value="1"
 ```
+Namespaced
+```
+arg name="namespace" default="nclml"
+```
 
 ## imu.launch
 Launches um7 imu node
