@@ -1,5 +1,5 @@
 # nclml_robot
-Nathanael's Camera, Lidar, Mapping and Localisation project
+Nathanael's Camera, Lidar, Mapping and Localisation robot project
 
 # Hardware
 * iRobot Create® 2 Programmable Robot
