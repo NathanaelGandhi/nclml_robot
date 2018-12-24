@@ -22,7 +22,6 @@ Nathanael's Camera, Lidar, Mapping and Localisation robot project
 ## SLAM packages
 * [cartographer_ros](https://github.com/googlecartographer/cartographer_ros)
 * [gmapping](http://wiki.ros.org/gmapping)
-
 * [robot_localization](http://wiki.ros.org/robot_localization)
 
 # Resources
