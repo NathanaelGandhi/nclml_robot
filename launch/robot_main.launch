@@ -11,6 +11,7 @@
 
     <group if="$(arg CREATE_DRIVER)">
         <include file="$(find ca_driver)/launch/create_2.launch" />
+#            <rosparam command="load" file="$(find nclml_robot)/config/create_2.yaml" />
     </group>
 
     <group if="$(arg LIDAR)">
