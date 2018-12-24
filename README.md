@@ -31,7 +31,9 @@ Nathanael's Camera, Lidar, Mapping and Localisation robot project
 
 # Codebase
 
-## Persistent Names for USB Serial Devices
+## Setup Codebase
+
+### Persistent Names for USB Serial Devices
 1. Find device USB port name
 ```
 udevadm monitor
@@ -65,7 +67,7 @@ sudo nano /etc/udev/rules.d/99-usb-serial.rules
 ```
 SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="A6006B1W", SYMLINK+="um7"
 ```
-### Create_2 - Persistent Naming
+#### Create_2 - Persistent Naming
 Follow steps in "Codebase > Persistent Names for USB Serial Devices" 
 ```
 SYMLINK+="create_2"
@@ -82,22 +84,22 @@ to
 ```
 dev: "/dev/create_2"
 ```
-### RPLidar_A2 - Persistent Naming
+#### RPLidar_A2 - Persistent Naming
 Should have been completed in setting up ros rplidar package
 ```
 /dev/rplidar
 ``` 
-### UM7_IMU - Persistent Naming
+#### UM7_IMU - Persistent Naming
 Follow steps in "Codebase > Persistent Names for USB Serial Devices" 
 ```
 SYMLINK+="um7"
 ```
-### RealSense_R200 - Persistent Naming
+#### RealSense_R200 - Persistent Naming
 Follow steps in "Codebase > Persistent Names for USB Serial Devices" 
 ```
 SYMLINK+="realsense_r200"
 ```
-## main.launch
+### main.launch
 Main launch file to run the robot
 ```
 roslaunch nclml_robot robot_main.launch  
@@ -114,5 +116,5 @@ Robots namespace
 arg name="namespace" default="nclml"
 ```
 
-## imu.launch
+### imu.launch
 Launches UM7 IMU node
