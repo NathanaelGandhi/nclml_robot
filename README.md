@@ -99,6 +99,9 @@ Follow steps in "Codebase > Persistent Names for USB Serial Devices"
 ```
 SYMLINK+="realsense_r200"
 ```
+
+## Running Codebase
+
 ### main.launch
 Main launch file to run the robot
 ```
