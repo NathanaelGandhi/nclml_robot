@@ -8,7 +8,7 @@ Nathanael's Camera, Lidar, Mapping and Localisation robot project
 
 * UM7 IMU
 
-* PrimeSense Camera
+* RealSense R200 Camera
 
 * Jetson TX1
 
@@ -31,24 +31,48 @@ Nathanael's Camera, Lidar, Mapping and Localisation robot project
 
 # Codebase
 
-## Persistent Names for Devices
-### Create2 - Persistent Naming
-1. Find SUBSYSTEM, idVendor, idProduct and serial of the device 
+## Setup Codebase
+
+### Persistent Names for USB Serial Devices
+1. Find device USB port name
+```
+udevadm monitor
+```
+2. Plug/unplug your device and look for *"ttyUSB0"*
+```
+KERNEL[59094.407544] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.4/1-3.4:1.0/ttyUSB0/tty/ttyUSB0 (tty)
+KERNEL[59094.407631] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.4/1-3.4:1.0/ttyUSB0 (usb-serial)
+KERNEL[59094.407759] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.4/1-3.4:1.0 (usb)
+KERNEL[59094.408442] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.4 (usb)
+KERNEL[59094.408825] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.0 (usb)
+KERNEL[59094.409507] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3 (usb)
+UDEV  [59094.425841] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.4/1-3.4:1.0/ttyUSB0/tty/ttyUSB0 (tty)
+UDEV  [59094.426082] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.0 (usb)
+UDEV  [59094.426230] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.4/1-3.4:1.0/ttyUSB0 (usb-serial)
+UDEV  [59094.426960] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.4/1-3.4:1.0 (usb)
+UDEV  [59094.427408] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.4 (usb)
+UDEV  [59094.428014] remove   /devices/pci0000:00/0000:00:14.0/usb1/1-3 (usb)
+```
+3. Find SUBSYSTEM, idVendor, idProduct and serial of the device 
 
 *Note: Change "ttyUSB0" to the device you are interested in. Udevadm info starts with the device specified by the devpath and then walks up the chain of parent devices. Therefore only use the first value output for each field.*
 ```
 udevadm info -a -n /dev/ttyUSB0 | grep -E 'SUBSYSTEM|{idVendor}|{idProduct}|{serial}'
 ```
-2. Create UDEV rules file
+4. Create UDEV rules file
 ```
-cd /etc/udev/rules.d
-sudo nano 99-usb-serial.rules
+sudo nano /etc/udev/rules.d/99-usb-serial.rules
 ```
-3. Add your rule
+5. Add your rule
 ```
-SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", ATTRS{serial}=="DA01NYKQ", SYMLINK+="create2"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="A6006B1W", SYMLINK+="um7"
 ```
-4. Change the device path for the robot inside the create driver yaml
+#### Create_2 - Persistent Naming
+Follow steps in "Codebase > Persistent Names for USB Serial Devices" 
+```
+SYMLINK+="create_2"
+```
+Change the device path for the robot inside the create driver yaml
 ```
 rosed ca_driver default.yaml 
 ```
@@ -58,10 +82,24 @@ dev: "/dev/ttyUSB0"
 ```
 to
 ```
-dev: "/dev/create2"
+dev: "/dev/create_2"
 ```
-
-## main.launch
+#### RPLidar_A2 - Persistent Naming
+Should have been completed in setting up ros rplidar package
+```
+/dev/rplidar
+``` 
+#### UM7_IMU - Persistent Naming
+Follow steps in "Codebase > Persistent Names for USB Serial Devices" 
+```
+SYMLINK+="um7"
+```
+#### RealSense_R200 - Persistent Naming
+Follow steps in "Codebase > Persistent Names for USB Serial Devices" 
+```
+SYMLINK+="realsense_r200"
+```
+### main.launch
 Main launch file to run the robot
 ```
 roslaunch nclml_robot robot_main.launch  
@@ -78,5 +116,5 @@ Robots namespace
 arg name="namespace" default="nclml"
 ```
 
-## imu.launch
-Launches um7 imu node
+### imu.launch
+Launches UM7 IMU node
