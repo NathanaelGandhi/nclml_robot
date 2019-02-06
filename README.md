@@ -107,8 +107,13 @@ Follow steps in "Codebase > Persistent Names for USB Serial Devices"
 ```
 SYMLINK+="realsense_r200"
 ```
-### Install cartographer_ros
+### Install packages
+
+#### cartographer_ros
 https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html
+
+#### hector_exploration_planner
+
 
 ## Running Codebase
 
