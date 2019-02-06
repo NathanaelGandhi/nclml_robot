@@ -1,5 +1,7 @@
 # nclml_robot
 Nathanael's Camera, Lidar, Mapping and Localisation robot project
+Gathering data in an unknown environment using SLAM and frontier exploration. 
+Cartographer SLAM with Hector Exploration.
 
 # Hardware
 * iRobot Create® 2 Programmable Robot
@@ -23,6 +25,9 @@ Nathanael's Camera, Lidar, Mapping and Localisation robot project
 * [cartographer_ros](https://github.com/googlecartographer/cartographer_ros)
 * [gmapping](http://wiki.ros.org/gmapping)
 * [robot_localization](http://wiki.ros.org/robot_localization)
+
+## Exploration packages
+* [hector_exploration_planner](http://wiki.ros.org/hector_exploration_planner)
 
 # Resources
 * [ROS Navigation Tuning Guide](http://kaiyuzheng.me/documents/navguide.pdf)
