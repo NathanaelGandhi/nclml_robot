@@ -14,6 +14,14 @@ Cartographer SLAM with Hector Exploration.
 
 # Software
 
+## SLAM packages
+* [cartographer_ros](https://github.com/googlecartographer/cartographer_ros)
+* [gmapping](http://wiki.ros.org/gmapping)
+* [robot_localization](http://wiki.ros.org/robot_localization)
+
+## Exploration packages
+* [hector_exploration_planner](http://wiki.ros.org/hector_exploration_planner)
+
 ## Hardware Packages
 * [create_autonomy](http://wiki.ros.org/create_autonomy)
 * [rplidar](http://wiki.ros.org/rplidar)
@@ -22,14 +30,6 @@ Cartographer SLAM with Hector Exploration.
 ## Visualisation & Manual Control
 * [rviz](http://wiki.ros.org/rviz)
 * [teleop_twist_keyboard](http://wiki.ros.org/teleop_twist_keyboard)
-
-## SLAM packages
-* [cartographer_ros](https://github.com/googlecartographer/cartographer_ros)
-* [gmapping](http://wiki.ros.org/gmapping)
-* [robot_localization](http://wiki.ros.org/robot_localization)
-
-## Exploration packages
-* [hector_exploration_planner](http://wiki.ros.org/hector_exploration_planner)
 
 # Resources
 * [ROS Navigation Tuning Guide](http://kaiyuzheng.me/documents/navguide.pdf)
