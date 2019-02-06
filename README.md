@@ -1,6 +1,8 @@
 # nclml_robot
-Nathanael's Camera, Lidar, Mapping and Localisation robot project
+Nathanael's Camera, Lidar, Mapping and Localisation robot project.
+
 Gathering data in an unknown environment using SLAM and frontier exploration. 
+
 Cartographer SLAM with Hector Exploration.
 
 # Hardware
