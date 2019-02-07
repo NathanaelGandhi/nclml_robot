@@ -20,6 +20,7 @@ Cartographer SLAM with Hector Exploration.
 * [robot_localization](http://wiki.ros.org/robot_localization)
 
 ## Exploration packages
+* [hector_nav_msgs](http://wiki.ros.org/hector_nav_msgs)
 * [hector_exploration_planner](http://wiki.ros.org/hector_exploration_planner)
 
 ## Hardware Packages
@@ -113,7 +114,8 @@ SYMLINK+="realsense_r200"
 https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html
 
 #### hector_exploration_planner
-
+clone and build hector_nav_msgs
+clone and build hector_exploration_planner
 
 ## Running Codebase
 
