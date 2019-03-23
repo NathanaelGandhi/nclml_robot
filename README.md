@@ -13,7 +13,7 @@
 * [turtlebot_teleop](http://wiki.ros.org/turtlebot_teleop)
 # Codebase
 ```
-arg name="CREATE_DRIVER"   value="1"
+arg name="ROBOT_BASE"   value="1"
 arg name="LIDAR"           value="1"
 arg name="IMU"             value="1"
 arg name="CAMERA"          value="1"
