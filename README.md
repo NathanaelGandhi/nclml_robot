@@ -1,3 +1,5 @@
+# THIS README IS TO BE CONSIDERED DEPRECIATED, THE INFORMATION IN HERE NEEDS TO BE MOVED TO THE RELEVANT WIKI PAGES
+
 # nclml_robot
 Nathanael's Camera, Lidar, Mapping and Localisation robot project.
 
