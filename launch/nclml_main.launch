@@ -23,7 +23,7 @@
     </group>
 
     <group if="$(arg CAMERA)">
-       # <include file="$(find pkg)/launch/launchfile.launch" />
+       # <include file="$(find nclml_robot)/launch/camera.launch" />
     </group>
 
     <group if="$(arg KEYBOARD)">
