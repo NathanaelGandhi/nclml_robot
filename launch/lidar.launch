@@ -1,0 +1,4 @@
+<launch>
+    # Using RPLidar package. Check wiki.ros.org for package details
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+</launch>

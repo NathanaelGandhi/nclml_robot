@@ -5,7 +5,7 @@
 <group ns="$(arg namespace)">
 
     <arg name="ROBOT_BASE"      value="0"   />
-    <arg name="LIDAR"           value="0"   />
+    <arg name="LIDAR"           value="1"   />
     <arg name="IMU"             value="0"   />
     <arg name="CAMERA"          value="0"   />
     <arg name="KEYBOARD"        value="1"   />
@@ -15,7 +15,7 @@
     </group>
 
     <group if="$(arg LIDAR)">
-        <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+        <include file="$(find nclml_robot)/launch/lidar.launch" />
     </group>
 
     <group if="$(arg IMU)">
