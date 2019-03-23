@@ -4,14 +4,14 @@
 
 <group ns="$(arg namespace)">
 
-    <arg name="CREATE_DRIVER"   value="1"   />
+    <arg name="ROBOT_BASE"      value="0"   />
     <arg name="LIDAR"           value="0"   />
-    <arg name="IMU"             value="1"   />
+    <arg name="IMU"             value="0"   />
     <arg name="CAMERA"          value="0"   />
+    <arg name="KEYBOARD"        value="1"   />
 
-    <group if="$(arg CREATE_DRIVER)">
-        <include file="$(find ca_driver)/launch/create_2.launch" />
-#            <rosparam command="load" file="$(find nclml_robot)/config/create_2.yaml" />
+    <group if="$(arg ROBOT_BASE)">
+        <include file="$(find nclml_robot)/launch/robot_base.launch" />
     </group>
 
     <group if="$(arg LIDAR)">
@@ -24,6 +24,10 @@
 
     <group if="$(arg CAMERA)">
        # <include file="$(find pkg)/launch/launchfile.launch" />
+    </group>
+
+    <group if="$(arg KEYBOARD)">
+       # <include file="$(find nclml_robot)/launch/keyboard.launch" />
     </group>
 
 </group>
