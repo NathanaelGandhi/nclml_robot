@@ -11,14 +11,3 @@
 ## Visualisation & Manual Control
 * [rviz](http://wiki.ros.org/rviz)
 * [turtlebot_teleop](http://wiki.ros.org/turtlebot_teleop)
-# Codebase
-```
-arg name="ROBOT_BASE"   value="1"
-arg name="LIDAR"           value="1"
-arg name="IMU"             value="1"
-arg name="CAMERA"          value="1"
-```
-Robots namespace
-```
-arg name="namespace" default="nclml"
-```
