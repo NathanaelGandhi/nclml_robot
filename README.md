@@ -30,7 +30,7 @@ Cartographer SLAM with Hector Exploration.
 
 ## Visualisation & Manual Control
 * [rviz](http://wiki.ros.org/rviz)
-* [teleop_twist_keyboard](http://wiki.ros.org/teleop_twist_keyboard)
+* [turtlebot_teleop](http://wiki.ros.org/turtlebot_teleop)
 
 # Resources
 * [Programming Robots with ROS](http://marte.aslab.upm.es/redmine/files/dmsf/p_drone-testbed/170324115730_268_Quigley_-_Programming_Robots_with_ROS.pdf)
@@ -38,6 +38,7 @@ Cartographer SLAM with Hector Exploration.
 * [Persistent names for usb-serial devices](http://hintshop.ludvig.co.nz/show/persistent-names-usb-serial-devices/)
 * [A Platform for Indoor Localisation, Mapping, and Data Collection using an Autonomous Vehicle](http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=8915402&fileOId=8915426)
 * [Cartographer ROS Integration](https://google-cartographer-ros.readthedocs.io/en/latest/)
+* [teleop_twist_keyboard](http://wiki.ros.org/teleop_twist_keyboard)
 
 # Codebase
 
